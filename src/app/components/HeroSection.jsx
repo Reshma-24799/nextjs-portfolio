@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { TypeAnimation } from 'react-type-animation'
 
 const HeroSection = () => {
   return (
@@ -6,7 +9,21 @@ const HeroSection = () => {
         <div className="grid  grid-cols-1 sm:grid-cols-12">
           <div className="col-span-7 place-self-center text-center sm:text-left">
             <h1 className="text-white mb-4 text-4xl sm:lg-text-5xl lg:text-6xl font-extrabold">
-             <span className="text-transparent bg-clip-text bg-gradient-to-r  from-purple-400 to-pink-600">Hello, I'm Reshma</span> 
+             <span className="text-transparent bg-clip-text bg-gradient-to-r  from-purple-400 to-pink-600">
+                Hello, I'm{" "} 
+              </span> 
+              <br></br>
+              <TypeAnimation
+                sequence={[
+                  'Reshma',
+                  1000, // wait 1s before replacing "Mice" with "Hamsters"
+                  'a Web Developer',
+                  1000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+              />
             </h1>
             <p className="text-[#ADB7BE] sm:text-lg lg:text-xl mb-6">
               As a full-stack web developer with three years of experience, I specialize
