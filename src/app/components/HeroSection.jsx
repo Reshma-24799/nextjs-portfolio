@@ -30,9 +30,12 @@ const HeroSection = () => {
               Crafting immersive digital experience with precision and passion.
             </p>
             <div>
-              <button className="w-full sm:w-fit px-6 py-3 rounded-full mr-4 hover:bg-slate-200 bg-gradient-to-br from-blue-500 via-purple-500  to-pink-500 text-white">
-                  Hire Me
-              </button>
+              <Link
+                href="/#contact"
+                className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 to-purple-500 hover:bg-slate-200 text-white"
+              >
+                Hire Me
+              </Link>
               <Link 
                 href="https://drive.google.com/file/d/1fEN3bl8yoe-gcZHS4eYxmQ1cwEu9hFG4/view?usp=drivesdk" 
                 target="_blank"
