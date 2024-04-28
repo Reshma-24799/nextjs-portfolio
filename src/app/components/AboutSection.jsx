@@ -2,6 +2,7 @@
 
 import { useState, useTransition } from "react";
 import TabButton from "./TabButton";
+import { motion } from "framer-motion";
 
 const TABDATA=[
    
@@ -75,7 +76,12 @@ const AboutSection = () => {
                     {TABDATA.find((t) => t.id === tab).content}
                 </div>
             </div>
-           <div className="flex flex-col gap-4 mt-10">
+           <motion.div
+             initial={{ opacity: 0, scale: 0.5 }}
+             animate={{ opacity: 1, scale: 1 }}
+             transition={{ duration: 0.5 }} 
+              className="flex flex-col gap-4 mt-10"
+           >
             <div className="rounded  h-6 text-sm cursor-pointer bg-purple-500/50 text-black font-medium">
                 <div className="bg-purple-500 w-[90%] h-full pl-4 rounded items-center flex justify-start">
                     JavaScript
@@ -126,7 +132,7 @@ const AboutSection = () => {
                    Git
                 </div>
               </div>
-              </div>
+              </motion.div>
         </div>
     </section>
   )
