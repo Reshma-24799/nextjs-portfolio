@@ -54,7 +54,7 @@ const AboutSection = () => {
                 As a full-stack web developer with almost three years of experience, I specialize
               in crafting fast, responsive, and dynamic websites that prioritize user
               experience above all else. My expertise lies in creating intuitive interfaces 
-              that seamlessly engage and empower end-users. Let's collaborate and bring your vision to life!
+              that seamlessly engage and empower end-users. Let&apos;s collaborate and bring your vision to life!
                 </p>
                 <div className="flex flex-row justify-start mt-8 ">
                     <TabButton
