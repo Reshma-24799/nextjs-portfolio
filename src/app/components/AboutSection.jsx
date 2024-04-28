@@ -1,0 +1,135 @@
+"use client";
+
+import { useState, useTransition } from "react";
+import TabButton from "./TabButton";
+
+const TABDATA=[
+   
+    {
+        title: "Education",
+        id: "education",
+        content: (
+           <ul className="list-disc pl-2">
+                <li>Bachelor of Technology</li>
+                <ul>
+                    <li>APJ Abdul Kalam Technical University(2017-2021)</li>
+                    <li>9.3 GPA</li>
+                </ul>
+           </ul>
+        )
+    },
+    {
+        title: "Experience",
+        id: "experience",
+        content: (
+           <ul className="list-disc pl-2">
+                <li>Envestnet Inc.</li>
+                    <ul>
+                        <li>Prodct development Engineer(2021 - 2023)</li>
+                        <li>Senior Prodct development Engineer(2023 - Present)</li>
+                    </ul>
+           </ul>
+        )
+    }
+
+]
+
+
+const AboutSection = () => {
+    const [tab, setTab] = useState("education");
+    const [startTransition] = useTransition();
+
+    const handleTabChange = (id) => {
+        startTransition(() => {
+            setTab(id);
+        });
+    }
+  return (
+    <section  className="text-white" id="about">
+        <div className="md:grid md:grid-cols-2 gap-8 xl:gap-16 items-center py-8 sm:py-16 px-4 xl:px-16">
+            <div>
+                <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+                <p className="text-base lg:text-lg">
+                As a full-stack web developer with almost three years of experience, I specialize
+              in crafting fast, responsive, and dynamic websites that prioritize user
+              experience above all else. My expertise lies in creating intuitive interfaces 
+              that seamlessly engage and empower end-users. Let's collaborate and bring your vision to life!
+                </p>
+                <div className="flex flex-row justify-start mt-8 ">
+                    <TabButton
+                        selectTab={() => handleTabChange("education")}
+                        active={tab === "education"}
+                    >
+                        {" "}
+                        Education{" "}
+                    </TabButton>
+                    <TabButton
+                        selectTab={() => handleTabChange("experience")}
+                        active={tab === "experience"}
+                    >
+                        {" "}
+                        Experience{" "}
+                    </TabButton>
+                </div>
+                <div className="mt-8">
+                    {TABDATA.find((t) => t.id === tab).content}
+                </div>
+            </div>
+           <div className="flex flex-col gap-4 mt-10">
+            <div className="rounded  h-6 text-sm cursor-pointer bg-purple-500/50 text-black font-medium">
+                <div className="bg-purple-500 w-[90%] h-full pl-4 rounded items-center flex justify-start">
+                    JavaScript
+                </div>
+              </div>
+              <div className="rounded  h-6 text-sm cursor-pointer bg-purple-500/50 text-black font-medium">
+                <div className="bg-purple-500 w-[85%] h-full pl-4 rounded items-center flex justify-start">
+                    Tailwind CSS
+                </div>
+              </div>
+              <div className="rounded  h-6 text-sm cursor-pointer bg-purple-500/50 text-black font-medium">
+                <div className="bg-purple-500 w-[90%] h-full pl-4 rounded items-center flex justify-start">
+                    React
+                </div>
+              </div>
+              <div className="rounded  h-6 text-sm cursor-pointer bg-purple-500/50 text-black font-medium">
+                <div className="bg-purple-500 w-[75%] h-full pl-4 rounded items-center flex justify-start">
+                    Node.js
+                </div>
+              </div>
+              <div className="rounded  h-6 text-sm cursor-pointer bg-purple-500/50 text-black font-medium">
+                <div className="bg-purple-500 w-[80%] h-full pl-4 rounded items-center flex justify-start">
+                    Next.js
+                </div>
+              </div>
+              <div className="rounded  h-6 text-sm cursor-pointer bg-purple-500/50 text-black font-medium">
+                <div className="bg-purple-500 w-[70%] h-full pl-4 rounded items-center flex justify-start">
+                   MongoDB
+                </div>
+              </div>
+              <div className="rounded  h-6 text-sm cursor-pointer bg-purple-500/50 text-black font-medium">
+                <div className="bg-purple-500 w-[70%] h-full pl-4 rounded items-center flex justify-start">
+                   Express.js
+                </div>
+              </div>
+              <div className="rounded  h-6 text-sm cursor-pointer bg-purple-500/50 text-black font-medium">
+                <div className="bg-purple-500 w-[90%] h-full pl-4 rounded items-center flex justify-start">
+                   Redux
+                </div>
+              </div>
+              <div className="rounded  h-6 text-sm cursor-pointer bg-purple-500/50 text-black font-medium" >
+                <div className="bg-purple-500 w-[80%] h-full pl-4 rounded items-center flex justify-start">
+                   Typescript
+                </div>
+              </div>
+              <div className="rounded  h-86text-sm cursor-pointer bg-purple-500/50 text-black font-medium-">
+                <div className="bg-purple-500 w-[80%] h-full pl-4 rounded items-center flex justify-start">
+                   Git
+                </div>
+              </div>
+              </div>
+        </div>
+    </section>
+  )
+}
+
+export default AboutSection
