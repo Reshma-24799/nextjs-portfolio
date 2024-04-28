@@ -1,6 +1,5 @@
 
 const TabButton = ({ active, selectTab, children}) => {
-    console.log("ac",active);
     const buttonClass = active ? "text-white border-b border-purple-500" :  " text-[#ADB7BE] ";
   return (
     <button onClick={selectTab} >
