@@ -1,12 +1,38 @@
+"use client";
+
 import Image from "next/image"
 import Link from "next/link"
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
+import { useState } from "react";
 
 const EmailSection = () => {
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    // }
+    const [emailSubmitted, setEmailSubmitted] = useState(false);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const data = {
+            email: e.target.email.value,
+            subject: e.target.subject.value,
+            message: e.target.message.value,
+          };
+          const JSONdata = JSON.stringify(data);
+          console.log(JSONdata)
+          const endpoint = "/api/send";
+          const options = {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSONdata,
+          };
+          const response = await fetch(endpoint, options);
+          const resData = await response.json();
+
+        if (response.status === 200) {
+            console.log("Message sent.");
+            setEmailSubmitted(true);
+        }
+    }
   return (
     <section 
         className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative" 
@@ -30,25 +56,32 @@ const EmailSection = () => {
                 </div>
             </div>
             <div>
-                <form className="flex flex-col gap-4" >
+                {emailSubmitted ? (
+                    <p className="text-green-500 text-sm mt-2">
+                        Email sent successfully!
+                    </p>
+                    ): (
+                <form className="flex flex-col gap-4" onSubmit={handleSubmit} >
                     <div className="mb-6">
                         <label htmlFor="email" className="text-white block mb-2 text-sm font-medium">Your Email</label>
                         <input
+                            name="email"
                             type="email"
                             id="email"
                             required
                             placeholder="name@gmail.com"
-                            className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text gray-100 text-sm rounded-lg block w-full p-2.5"
+                            className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                         />
                     </div>
                     <div className="mb-6">
                         <label htmlFor="subject" className="text-white block mb-2 text-sm font-medium">Subject</label>
                         <input
+                            name="subject"
                             type="text"
                             id="subject"
                             required
                             placeholder="Just saying Hi."
-                            className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text gray-100 text-sm rounded-lg block w-full p-2.5"
+                            className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                         />
                     </div>
                     <div className="mb-6">
@@ -56,9 +89,10 @@ const EmailSection = () => {
                         <textarea
                             type="text"
                             id="message"
+                            name="message"
                             required
                             placeholder="name@gmail.com"
-                            className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text gray-100 text-sm rounded-lg block w-full p-2.5"
+                            className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                         />
                     </div>
                     <button
@@ -68,6 +102,7 @@ const EmailSection = () => {
                         Send Message
                     </button>
                 </form>
+                )}
             </div>
     </section>
   )
