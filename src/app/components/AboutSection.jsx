@@ -14,7 +14,7 @@ const TABDATA=[
                 <li>Bachelor of Technology</li>
                 <ul>
                     <li>APJ Abdul Kalam Technical University(2017-2021)</li>
-                    <li>9.3 GPA</li>
+                    <li>9.1 GPA</li>
                 </ul>
            </ul>
         )
@@ -25,7 +25,7 @@ const TABDATA=[
         content: (
            <ul className="list-disc pl-2">
                 <li>Envestnet Inc.</li>
-                    <ul>
+                    <ul className="list-disc pl-2">
                         <li>Prodct development Engineer(2021 - 2023)</li>
                         <li>Senior Prodct development Engineer(2023 - Present)</li>
                     </ul>
