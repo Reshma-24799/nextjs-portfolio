@@ -16,6 +16,10 @@ const TABDATA=[
                     <li>APJ Abdul Kalam Technical University(2017-2021)</li>
                     <li>9.1 GPA</li>
                 </ul>
+                <li>Master of Science</li>
+                <ul>
+                    <li>University of Lodz(2024-Present)</li>
+                </ul>
            </ul>
         )
     },
@@ -26,8 +30,8 @@ const TABDATA=[
            <ul className="list-disc pl-2">
                 <li>Envestnet Inc.</li>
                     <ul className="list-disc pl-2">
-                        <li>Prodct development Engineer(2021 - 2023)</li>
-                        <li>Senior Prodct development Engineer(2023 - Present)</li>
+                        <li>Frontend development Engineer(2021 - 2023)</li>
+                        <li>Senior Frontend development Engineer(2023 - 2024)</li>
                     </ul>
            </ul>
         )
@@ -82,9 +86,19 @@ const AboutSection = () => {
              transition={{ duration: 0.5 }} 
               className="flex flex-col gap-4 mt-10"
            >
-            <div className="rounded  h-6 text-sm cursor-pointer bg-purple-500/50 text-black font-medium">
+              <div className="rounded  h-6 text-sm cursor-pointer bg-purple-500/50 text-black font-medium">
                 <div className="bg-purple-500 w-[90%] h-full pl-4 rounded items-center flex justify-start">
-                    JavaScript
+                    React.js
+                </div>
+              </div>
+              <div className="rounded  h-6 text-sm cursor-pointer bg-purple-500/50 text-black font-medium">
+                <div className="bg-purple-500 w-[90%] h-full pl-4 rounded items-center flex justify-start">
+                    Typescript
+                </div>
+              </div>
+              <div className="rounded  h-6 text-sm cursor-pointer bg-purple-500/50 text-black font-medium">
+                <div className="bg-purple-500 w-[90%] h-full pl-4 rounded items-center flex justify-start">
+                    Javascript
                 </div>
               </div>
               <div className="rounded  h-6 text-sm cursor-pointer bg-purple-500/50 text-black font-medium">
@@ -94,7 +108,7 @@ const AboutSection = () => {
               </div>
               <div className="rounded  h-6 text-sm cursor-pointer bg-purple-500/50 text-black font-medium">
                 <div className="bg-purple-500 w-[90%] h-full pl-4 rounded items-center flex justify-start">
-                    React
+                    REST API
                 </div>
               </div>
               <div className="rounded  h-6 text-sm cursor-pointer bg-purple-500/50 text-black font-medium">

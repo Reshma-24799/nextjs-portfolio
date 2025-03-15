@@ -14,6 +14,14 @@ const projectData = [
     },
     {
         id: 2,
+        title: "MERN AI Finance Dashboard App",
+        description: "Finance Dashboard using Recharts and Linear Regression",
+        image: "/images/projects/fin.png",
+        gitUrl:"Links: https://github.com/Reshma-24799/financify",
+        previewUrl:"https://financify-blue.vercel.app/"
+    },
+    {
+        id: 3,
         title: "Google-search Clone",
         description: "Google-search Clone using Next.js, React and Tailwind CSS",
         image: "/images/projects/google-clone.png",
@@ -21,7 +29,7 @@ const projectData = [
         previewUrl:"https://glowing-tiramisu-4c0607.netlify.app/"
     },
     {
-        id: 3,
+        id: 4,
         title: "Portfolio",
         description: "Portfolio using Next.js, React, React Type Animation and Tailwind CSS ",
         image: "/images/projects/portfolio.jpg",
