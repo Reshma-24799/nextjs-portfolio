@@ -17,7 +17,7 @@ const projectData = [
         title: "MERN AI Finance Dashboard App",
         description: "Finance Dashboard using Recharts and Linear Regression",
         image: "/images/projects/fin.png",
-        gitUrl:"Links: https://github.com/Reshma-24799/financify",
+        gitUrl:"https://github.com/Reshma-24799/financify",
         previewUrl:"https://financify-blue.vercel.app/"
     },
     {
