@@ -11,15 +11,18 @@ const TABDATA=[
         id: "education",
         content: (
            <ul className="list-disc pl-2">
-                <li>Bachelor of Technology</li>
+            <li>Master of Science: Computer Science</li>
                 <ul>
-                    <li>APJ Abdul Kalam Technical University(2017-2021)</li>
+                    <li>University of Lodz</li>
+                    <li>2024-Present</li>
+                </ul>
+                <li>Bachelor of Technology: Computer Science</li>
+                <ul>
+                    <li>APJ Abdul Kalam Technical University</li>
+                    <li>2017-2021</li>
                     <li>9.1 GPA</li>
                 </ul>
-                <li>Master of Science</li>
-                <ul>
-                    <li>University of Lodz(2024-Present)</li>
-                </ul>
+                
            </ul>
         )
     },
