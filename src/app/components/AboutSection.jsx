@@ -15,12 +15,13 @@ const TABDATA=[
                 <ul>
                     <li>University of Lodz</li>
                     <li>2024-Present</li>
+                    <li>4.96/5 GPA</li>
                 </ul>
                 <li>Bachelor of Technology: Computer Science</li>
                 <ul>
                     <li>APJ Abdul Kalam Technical University</li>
                     <li>2017-2021</li>
-                    <li>9.1 GPA</li>
+                    <li>9.1/10 GPA</li>
                 </ul>
                 
            </ul>
@@ -31,11 +32,16 @@ const TABDATA=[
         id: "experience",
         content: (
            <ul className="list-disc pl-2">
-                <li>Envestnet Inc.</li>
+                <li className="font-bold">Envestnet Inc.</li>
                     <ul className="list-disc pl-2">
-                        <li>Frontend development Engineer(2021 - 2023)</li>
                         <li>Senior Frontend development Engineer(2023 - 2024)</li>
+                        <li>Frontend development Engineer(2021 - 2023)</li>
+                        
                     </ul>
+                <li className="font-bold">Rise and Fame</li>
+                  <ul className="list-disc pl-2">
+                      <li>Blockchain and Frontend Developer Intern(2025)</li>
+                  </ul>
            </ul>
         )
     }
@@ -58,7 +64,7 @@ const AboutSection = () => {
             <div>
                 <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
                 <p className="text-base lg:text-lg">
-                As a full-stack web developer with almost three years of experience, I specialize
+                As a full-stack web developer with more than three years of experience, I specialize
               in crafting fast, responsive, and dynamic websites that prioritize user
               experience above all else. My expertise lies in creating intuitive interfaces 
               that seamlessly engage and empower end-users. Let&apos;s collaborate and bring your vision to life!
@@ -141,7 +147,7 @@ const AboutSection = () => {
               </div>
               <div className="rounded  h-6 text-sm cursor-pointer bg-purple-500/50 text-black font-medium" >
                 <div className="bg-purple-500 w-[80%] h-full pl-4 rounded items-center flex justify-start">
-                   Typescript
+                   PostgreSql
                 </div>
               </div>
               <div className="rounded  h-86text-sm cursor-pointer bg-purple-500/50 text-black font-medium-">

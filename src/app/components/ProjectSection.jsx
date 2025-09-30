@@ -22,6 +22,14 @@ const projectData = [
     },
     {
         id: 3,
+        title: "Magic Crotchet Store",
+        description: "Ecommerce store frontend using React, Typescript and Tailwind CSS ",
+        image: "/images/projects/magic-crotchet.png",
+        gitUrl:"https://github.com/Reshma-24799/magic-crotchet",
+        previewUrl:"https://magic-crotchet.vercel.app/"
+    },
+    {
+        id: 3,
         title: "Google-search Clone",
         description: "Google-search Clone using Next.js, React and Tailwind CSS",
         image: "/images/projects/google-clone.png",
