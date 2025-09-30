@@ -35,7 +35,7 @@ const EmailSection = () => {
     }
   return (
     <section 
-        className="grid md:grid-cols-2 my-12 md:my-12 py-20 gap-4 relative" 
+        className="flex justify-center items-center my-12 md:my-12 py-20 gap-4 relative" 
         id="contact"
     >
             <div>
@@ -46,6 +46,15 @@ const EmailSection = () => {
                     open. Whether you have a question or just want to say hi, I&apos;ll
                     try my best to get back to you!
                 </p>
+                <p>
+                    <span className="text-white font-medium">Email:</span>
+                    <span className="text-[#9CA2A9] hover:underline ml-2">reshmarajesh.dev@gmail.com</span>
+                </p>
+                <p className="my-4">
+                    <span className="text-white font-medium">Phone:</span>
+                    <span className="text-[#9CA2A9] hover:underline ml-2">+48 579390571</span>
+                </p>
+                
                 <div className="socials flex flex-row gap-2">
                 <Link href="https://github.com/Reshma-24799" target="_blank">
                     <Image src={GithubIcon} alt="Github Icon" />
@@ -55,7 +64,7 @@ const EmailSection = () => {
                 </Link>
                 </div>
             </div>
-            <div>
+            {/* <div>
                 {emailSubmitted ? (
                     <p className="text-green-500 text-sm mt-2">
                         Email sent successfully!
@@ -103,7 +112,7 @@ const EmailSection = () => {
                     </button>
                 </form>
                 )}
-            </div>
+            </div> */}
     </section>
   )
 }
